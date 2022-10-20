@@ -29,13 +29,13 @@ function App() {
   return (
     <BrowserRouter >
       <div className={classes.App}> 
-        <Header/>
+        
                  
         <Routes >
           
           <Route  path="/" element={<ProtectRoute><Header/> <Homepage/></ProtectRoute>} />
-          <Route path="/coins/:id" element={<CoinPage/>} />
-          <Route path="/portfolio" element={<PortfolioPage/>}/>
+          <Route path="/coins/:id" element={<><Header/> <CoinPage/></>} />
+          <Route path="/portfolio" element={<><Header/> <PortfolioPage/></>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<SignUp/>}/>
           
