@@ -1,0 +1,35 @@
+show databases;
+show databses;
+show databases;
+use CRM;
+db.dropDatabase();
+show databases;
+use testingDB;
+db
+db.createCollection("Products");
+db.createCollection("Items");
+db.Products.drop();
+db.Items.drop();
+db.createCollection("Department");
+db.createCollection("Gender");
+db.Gender.drop();
+db
+db.contacts.insert({"Salary": 3000});
+db.contacts.insert({"name":"Abigail Kesseh","Gender":"Female);}
+db.contacts.insert({"name":"Abigail Kesseh","Gender":"Female"});
+db.contacts.insertMany({"name": "Theophilus Ansah"},{"name":"Godfred Cudjoe"});
+db.contacts.insertMany(     {"name":"Theophilus Ansah", "Gender":"Male"},     {"name":"Godfred Cudjoe", "Gender": "Male"} )
+db.contacts.insertMany([{"name":"Theophilus Ansah", "Gender":"Male"},     {"name":"Godfred Cudjoe", "Gender": "Male"} ]);
+db.contacts.update(     {"name": "Godfred Cudjoe"},     {         $set: {             "Mobile": "0247013810",             "Salary": "5000",             "isActive": true         }     } );
+db.contacts.update(     {"name": "Theophilus Ansah"},     {         $set: {             "Mobile": "0244698230",             "Salary": "3000",             "isActive": true         }     } );
+db.contacts.updateMany(     {"isActive": true},     {         $set: {                          "isActive": false         }     } );
+show databases
+use testingDB
+db.contacts.find()
+db.contacts.find().limit(2)
+db.contacts.find().skip(1)
+db.contacts.find().skip(2)
+db.contacts.find().sort({"name":-1});
+db.contacts.ensureIndex({"Department":1})
+db.contacts.find().sort({"Salary":-1})
+db.contacts.find().sort({"Salary":-1}).limit(1)
